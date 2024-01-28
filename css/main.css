@@ -1,0 +1,94 @@
+main {
+    margin-left: 400px;
+    background-color: #e4e5f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100dvh;
+    border-left: 3px dashed #484b6a;
+}
+
+h1 {
+    font-size: 64px;
+    color: #484b6a;
+    color: rgba(72,75,106, 0.2);
+    width: 300px;
+    height: 64px;
+    margin: auto;
+}
+
+section[data-content-id] {
+    display: none;
+    height: 100%;
+    max-height: calc(100vh - 8em);
+    overflow-y: scroll;
+    width: calc(100% - 2em);
+    margin-top: 108px;
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+main .active-tab {
+    display: flex;
+}
+
+
+
+
+/* Ниже редактирую классы для стилизации лаб */
+
+fieldset {
+    border: none;
+    width: calc(100% - 2em);
+    margin-inline: auto;
+}
+
+legend {
+    font-size: 36px;
+    color: #484b6a;
+    padding-left: 2rem;
+}
+
+.laboratory__img {
+    max-width: 600px;
+    max-height: 600px;
+    position: relative;
+}
+
+.laboratory__img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    max-width: 600px;
+    max-height: 600px;
+    gap: 100px;
+}
+
+.download-link {
+    max-width: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0;
+    z-index: 2;
+
+}
+
+.laboratory__img:hover .download-link  {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.laboratory__content {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
