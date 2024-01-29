@@ -12,12 +12,14 @@ main {
 }
 
 h1 {
+    
     font-size: 64px;
     color: #484b6a;
     color: rgba(72,75,106, 0.2);
     width: 300px;
     height: 64px;
     margin: auto;
+    transform: translateY(-50px);
 }
 
 section[data-content-id] {
@@ -99,7 +101,7 @@ legend {
 }
 
 .laboratory__download {
-    margin-top: 10px;
     position: absolute;
-    z-index: 3;
 }
+
+
