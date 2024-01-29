@@ -7,7 +7,7 @@ main {
     gap: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    height: 100dvh;
+    height: 100%;
     border-left: 3px dashed #484b6a;
 }
 
@@ -25,8 +25,8 @@ h1 {
 section[data-content-id] {
     display: none;
     height: 100%;
-    max-height: calc(100vh - 8em);
-    overflow-y: scroll;
+    min-height: 100vh;
+    /* overflow-y: scroll; */
     width: calc(100% - 2em);
     margin-inline: auto;
     flex-direction: column;
@@ -51,7 +51,10 @@ main .active-tab {
 fieldset {
     border: none;
     width: calc(100% - 2em);
+    height: fit-content;
+    height: -moz-fit-content;
     margin-inline: auto;
+    margin-bottom: 75px;
 }
 
 legend {
@@ -63,7 +66,7 @@ legend {
 .laboratory__img {
     max-width: 600px;
     max-height: 600px;
-    position: relative;
+    /* position: relative; */
 }
 
 .laboratory__img-container {
@@ -71,12 +74,15 @@ legend {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    width: 100%;
+    max-width: 600px;
     height: fit-content;
     max-width: 600px;
     max-height: 600px;
     gap: 100px;
     padding-top: 30px;
+    margin-bottom: 50px;
+    height: fit-content;
 }
 
 .download-link {
@@ -98,10 +104,55 @@ legend {
     display: flex;
     justify-content: center;
     gap: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.link-container {
+    position: absolute;
+    bottom: -40px;
 }
 
 .laboratory__download {
-    position: absolute;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    background: transparent;
+    padding: 10px 20px;
+    border: none;
+    position: relative;
+    z-index: 3;
+    transition: color .3s;
+    /* border: 1px solid #000; */
 }
 
+.laboratory__download::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    transition: all .3s;
+    background-color: #000;
+    border-radius: 20% 20% ;
+}
 
+body main .laboratory__download:hover {
+    color: rgba(255, 255, 255, 0.55);
+    text-shadow: 0 0 2px #fff;
+}
+
+.laboratory__download:hover::before {
+    height: 100%;
+    border-radius: 0%;
+
+}
+
+.img-wrap {
+    max-width: 600px;
+    max-height: 600px;
+}

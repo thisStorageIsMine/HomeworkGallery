@@ -17,3 +17,5 @@ ul.reset ul li {
 ul {
     list-style-type: none;
 }
+
+a:active,a:hover{outline:0}

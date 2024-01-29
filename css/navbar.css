@@ -1,3 +1,4 @@
+
 nav {
     position: fixed;
     top: 0;
@@ -7,6 +8,7 @@ nav {
     background-color: #e4e5f1;
     color: #484b6a;
     padding-left: 20px;
+    
 }
 
 .nav__main {
@@ -83,4 +85,14 @@ li > :is(span:hover, a:hover) {
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     border-left: 15px solid #484b6a;
+    /* opacity: 0; */
+    animation: show-it .2s linear;
+}
+
+@keyframes show-it {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }
