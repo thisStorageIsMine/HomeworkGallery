@@ -1,7 +1,13 @@
 //Выбираем все вкладки
 const filters = document.querySelectorAll("span[data-tab-id]"),
       categories = document.querySelectorAll("section[data-content-id]");
-const aOp = document.querySelector(".active");
+let curTab = document.querySelector(`section[data-content-id=${localStorage.getItem("lastTab")}]`);
+
+
+window.addEventListener("scroll", () => {
+    localStorage.setItem(`${curTab.dataset.contentId}Scroll`,document.documentElement.scrollTop );
+    console.log(`Saved scroll position for ${curTab.dataset.contentId} as ${document.documentElement.scrollTop }`);
+});
 
 
 //При клике на вкладку отображаем её контент
@@ -12,7 +18,10 @@ filters.forEach(f => {
         });
     
         document.querySelector(`section[data-content-id="${f.dataset.tabId}"`).classList.add("active-tab");
-        localStorage.setItem("lastTab", f.dataset.tabId)
+        const filter = f.dataset.tabId
+        localStorage.setItem("lastTab", filter);
+        curTab = filter;
+        window.scrollTo(0,0);
     });
 })
 
