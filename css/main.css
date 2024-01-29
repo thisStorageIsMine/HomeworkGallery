@@ -26,11 +26,15 @@ section[data-content-id] {
     max-height: calc(100vh - 8em);
     overflow-y: scroll;
     width: calc(100% - 2em);
-    margin-top: 108px;
     margin-inline: auto;
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
+   
+}
+
+section[data-content-id]::-webkit-scrollbar {
+    display: none;
 }
 
 main .active-tab {
@@ -70,6 +74,7 @@ legend {
     max-width: 600px;
     max-height: 600px;
     gap: 100px;
+    padding-top: 30px;
 }
 
 .download-link {
@@ -91,4 +96,10 @@ legend {
     display: flex;
     justify-content: center;
     gap: 35px;
+}
+
+.laboratory__download {
+    margin-top: 10px;
+    position: absolute;
+    z-index: 3;
 }

@@ -10,7 +10,7 @@ nav {
 }
 
 .nav__main {
-    margin-top: 50px;
+    
     margin-bottom: 47px;
 }
 
@@ -34,6 +34,14 @@ nav {
     user-select: none;
 }
 
+li > a {
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+}
+
+
+
 .nav__works > li {
     font-size: 32px;
     font-weight: 400;
@@ -41,9 +49,11 @@ nav {
     cursor: pointer;
 }
 
-li > span:hover {
+li > :is(span:hover, a:hover) {
     text-decoration: underline;
 }
+
+
 
 .dropdown-li {
     overflow: hidden;
