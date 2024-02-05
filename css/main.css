@@ -55,7 +55,7 @@ fieldset {
     height: fit-content;
     height: -moz-fit-content;
     margin-inline: auto;
-    margin-bottom: 75px;
+    margin-bottom: 125px;
 }
 
 legend {
@@ -68,6 +68,11 @@ legend {
     max-width: 600px;
     max-height: 600px;
     /* position: relative; */
+}
+
+.fix-size {
+    max-width: 600px;
+    max-height: 600px;
 }
 
 .laboratory__img-container {

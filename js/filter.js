@@ -6,7 +6,7 @@ let curTab = document.querySelector(`section[data-content-id=${localStorage.getI
 
 window.addEventListener("scroll", () => {
     localStorage.setItem(`${curTab.dataset.contentId}Scroll`,document.documentElement.scrollTop );
-    console.log(`Saved scroll position for ${curTab.dataset.contentId} as ${document.documentElement.scrollTop }`);
+    // console.log(`Saved scroll position for ${curTab.dataset.contentId} as ${document.documentElement.scrollTop }`);
 });
 
 
@@ -21,7 +21,7 @@ filters.forEach(f => {
         const filter = f.dataset.tabId
         localStorage.setItem("lastTab", filter);
         curTab = filter;
-        window.scrollTo(0,0);
+        window.scrollTo(0,localStorage.getItem(curTab.dataset.contentId));
     });
 })
 
