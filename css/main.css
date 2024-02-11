@@ -67,10 +67,11 @@ legend {
 .laboratory__img {
     max-width: 600px;
     max-height: 600px;
-    /* position: relative; */
 }
 
 .fix-size {
+    display: block;
+    width: 100%;
     max-width: 600px;
     max-height: 600px;
 }
